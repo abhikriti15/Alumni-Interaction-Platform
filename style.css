@@ -1,0 +1,356 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f3f2ef;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #283e4a;
+    padding: 10px 20px;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+header .search-bar {
+    width: 400px;
+    padding: 5px;
+}
+
+header nav a {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    display: inline-flex;
+    align-items: center;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+header nav a i {
+    margin-right: 8px; /* Space between icon and text */
+    font-size: 18px;
+}
+
+header nav a:hover {
+    color: #0073b1;
+    background-color: #e0e0e0;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+
+/* Layout */
+.container {
+    display: flex;
+    margin: 20px;
+}
+
+.sidebar-left, .sidebar-right {
+    width: 20%;
+    padding: 10px;
+}
+
+.feed {
+    width: 60%;
+}
+
+/* Profile Summary */
+.profile-summary {
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    transition: box-shadow 0.3s;
+}
+
+.profile-summary img {
+    width: 80px;
+    border-radius: 50%;
+}
+
+.profile-summary:hover {
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Post Creator */
+.post-creator {
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    transition: box-shadow 0.3s;
+}
+
+.post-creator textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.post-creator:hover {
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Post */
+.post {
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+}
+
+.post-header img {
+    width: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.post:hover {
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    transform: scale(1.02); /* Slight scaling effect on hover */
+}
+
+.post-actions {
+    margin-top: 10px;
+}
+
+.post-actions button {
+    margin-right: 10px;
+    padding: 5px 10px;
+    background-color: #0073b1;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.post-actions button:hover {
+    background-color: #005682; /* Darker shade on hover */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Buttons */
+button {
+    padding: 10px 15px;
+    background-color: #0073b1;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+button:hover {
+    background-color: #005682;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Right Sidebar */
+.sidebar-right {
+    background-color: #f3f2ef;
+}
+
+.suggestions {
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.suggestions h3 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #333;
+}
+
+/* Styling for People Suggestions */
+.suggestion-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    transition: box-shadow 0.3s;
+}
+
+.suggestion-item img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.suggestion-info h4 {
+    margin: 0;
+    font-size: 16px;
+    color: #0073b1; /* LinkedIn blue */
+}
+
+.suggestion-info p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #666;
+}
+
+.suggestion-item button {
+    padding: 5px 10px;
+    background-color: #0073b1;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: auto; /* Push button to the far right */
+    transition: background-color 0.3s;
+}
+
+.suggestion-item button:hover {
+    background-color: #005682;
+}
+
+/* Job Suggestions */
+.suggestions.jobs .suggestion-item h4 {
+    margin: 0;
+    font-size: 16px;
+    color: #0073b1;
+}
+
+.suggestions.jobs .suggestion-item p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #666;
+}
+
+.suggestions.jobs .suggestion-item button {
+    padding: 5px 10px;
+    background-color: #28a745; /* Green for job applications */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: auto;
+    transition: background-color 0.3s;
+}
+
+.suggestions.jobs .suggestion-item button:hover {
+    background-color: #218838;
+}
+
+/* Hover Effect for Suggestion Items */
+.suggestion-item:hover {
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Media Queries for Responsive Design */
+
+/* Mobile devices (width < 600px) */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header .search-bar {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    header nav {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    header nav a {
+        margin: 5px;
+        font-size: 14px;
+    }
+
+    .container {
+        flex-direction: column;
+        margin: 10px;
+    }
+
+    .feed {
+        width: 100%;
+    }
+
+    .sidebar-left, .sidebar-right {
+        display: none; /* Hide sidebars on mobile */
+    }
+
+    .post-creator {
+        padding: 10px;
+    }
+
+    .post {
+        padding: 10px;
+    }
+}
+
+/* Tablets (600px <= width < 1024px) */
+@media (min-width: 600px) and (max-width: 1024px) {
+    .container {
+        flex-direction: row;
+    }
+
+    .sidebar-left, .sidebar-right {
+        width: 25%; /* Increase sidebar width slightly */
+    }
+
+    .feed {
+        width: 50%; /* Feed takes more space */
+    }
+
+    .post-creator, .post {
+        padding: 15px;
+    }
+
+    header .search-bar {
+        width: 300px;
+    }
+
+    header nav a {
+        font-size: 16px;
+    }
+}
+
+/* Larger screens (desktops) */
+@media (min-width: 1024px) {
+    .container {
+        margin: 20px;
+    }
+
+    .sidebar-left, .sidebar-right {
+        width: 20%;
+    }
+
+    .feed {
+        width: 60%;
+    }
+
+    .post-creator, .post {
+        padding: 20px;
+    }
+
+    header .search-bar {
+        width: 400px;
+    }
+}
